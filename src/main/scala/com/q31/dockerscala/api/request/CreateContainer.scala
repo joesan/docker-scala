@@ -20,7 +20,10 @@ class CreateContainer(name: Option[String] = None, params: CreateContainerParams
       case Some(value) => webResource.queryParam("name", value)
       case None        => _
     }
-    webResource.request().accept(MediaType.APPLICATION_JSON).post(entity(params, MediaType.APPLICATION_JSON), classOf[CreateContainerResponse])
+    //webResource.request().accept(MediaType.APPLICATION_JSON).post(entity(params, MediaType.APPLICATION_JSON), classOf[CreateContainerResponse])
+    val response = webResource.request().accept(MediaType.APPLICATION_JSON).post(entity(params, MediaType.APPLICATION_JSON))
+
+    response.getStatus
   }
 }
 case class CreateContainerParams()

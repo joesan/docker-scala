@@ -3,12 +3,7 @@ package com.q31.dockerscala
 import javax.ws.rs.client.WebTarget
 
 /**
- *
- * User: Apache Software Foundation :: Apache Camel
- * Date: 11/18/14
- * Time: 8:45 PM
- * Year: 2014
- * Project: docker-scala
+ * @author Joe San (codeintheopen@gmail.com)
  */
 class DockerClientContext(baseResource: WebTarget) {
 

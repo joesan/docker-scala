@@ -12,3 +12,4 @@ trait DockerAPIRequest[T] {
   def resourcePath: String
   def execute(dockerClientContext: DockerClientContext): T
 }
+case class DockerClientException(statusCode: Int, errorMesage: String) extends Exception
