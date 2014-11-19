@@ -1,13 +1,16 @@
 package com.q31.dockerscala
 
+import com.typesafe.config.{ConfigFactory, Config}
+
 /**
- * Created by J33549 on 19/11/2014.
+ * @author Joe San (codeintheopen@gmail.com)
  */
 object DockerRemoteClientFactory {
 
-  val defaultClientContext: DockerClientContext =
+  // TODO... DockerClientContext needs WebTarget
+  private lazy val clientContext: Config => DockerClientContext = config => { new DockerClientContext(null) }
 
-  def buildDockerClient(clientContext: DockerClientContext): DockerRemoteClient = {
-    context
-  }
+  def buildFromConfig(config: Config): DockerRemoteClient = new DockerRemoteClientImpl(clientContext(config))
+
+  def buildDefault(): DockerRemoteClient = new DockerRemoteClientImpl(clientContext(ConfigFactory.load))
 }
