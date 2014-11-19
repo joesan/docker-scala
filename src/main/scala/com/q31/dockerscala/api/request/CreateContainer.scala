@@ -1,29 +1,29 @@
 package com.q31.dockerscala.api.request
 
-import com.q31.dockerscala.api._
-import com.q31.dockerscala.api.response.CreateContainerResponse
-import com.q31.dockerscala.DockerClientContext
-
-import javax.ws.rs.core.MediaType
 import javax.ws.rs.client.Entity.entity
+import javax.ws.rs.core.MediaType
+
+import com.q31.dockerscala.DockerClientContext
+import com.q31.dockerscala.api.response.CreateContainerResponse
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class CreateContainer(name: Option[String] = None, params: CreateContainerParams) extends DockerAPIRequest {
+class CreateContainer {
 
-  override def resourcePath = "/containers/create"
+  val resourcePath = "/containers/create"
 
-  def execute(dockerClientContext: DockerClientContext): CreateContainerResponse = {
+  def execute(dockerClientContext: DockerClientContext, params: CreateContainerParams, name: Option[String]): CreateContainerResponse = {
     val webResource = dockerClientContext.getBaseResource.path(resourcePath)
     name match {
       case Some(value) => webResource.queryParam("name", value)
-      case None        => _
+      case None        => println("no name specified for container")
     }
-    //webResource.request().accept(MediaType.APPLICATION_JSON).post(entity(params, MediaType.APPLICATION_JSON), classOf[CreateContainerResponse])
-    val response = webResource.request().accept(MediaType.APPLICATION_JSON).post(entity(params, MediaType.APPLICATION_JSON))
-
-    response.getStatus
+    webResource.request().accept(MediaType.APPLICATION_JSON).post(entity(params, MediaType.APPLICATION_JSON), classOf[CreateContainerResponse])
   }
+}
+object CreateContainer extends ((DockerClientContext, CreateContainerParams, Option[String]) => CreateContainerResponse) {
+
+  override def apply(context: DockerClientContext, params: CreateContainerParams, name: Option[String]): CreateContainerResponse = new CreateContainer().execute(context, params, name)
 }
 case class CreateContainerParams()

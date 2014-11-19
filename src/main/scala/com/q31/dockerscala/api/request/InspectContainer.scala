@@ -7,9 +7,13 @@ import com.q31.dockerscala.DockerClientContext
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class InspectContainer(id: String) extends DockerAPIRequest {
+class InspectContainer {
 
-  override def resourcePath = s"/containers/${id}/json"
+  val resourcePath = s"/containers/${id}/json"
 
-  override def execute(dockerClientContext: DockerClientContext): InspectContainerResponse = ???
+  final def execute(dockerClientContext: DockerClientContext): InspectContainerResponse = ???
+}
+object InspectContainer extends ((DockerClientContext, String) => InspectContainerResponse) {
+
+  override def apply(clientContext: DockerClientContext, id: String): InspectContainerResponse = new InspectContainer().execute(clientContext, id)
 }
