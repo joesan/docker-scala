@@ -13,6 +13,7 @@
     <apache.httpclient.version>4.3.5</apache.httpclient.version>
     <typesafe.config.version>1.2.1</typesafe.config.version>
     <scalatest.version>2.0</scalatest.version>
+    <bouncycastle.version>1.51</bouncycastle.version>
   </properties>
 
   <repositories>
@@ -62,6 +63,11 @@
       <artifactId>scalatest_${scala.version.minor}</artifactId>
       <version>${scalatest.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcpkix-jdk15on</artifactId>
+      <version>${bouncycastle.version}</version>
     </dependency>
   </dependencies>
 
