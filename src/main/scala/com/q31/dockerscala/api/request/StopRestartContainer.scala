@@ -6,7 +6,7 @@ import javax.ws.rs.core.MediaType
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class StopRestartContainer(stopOrRestart: StopRestartContainer, id: ContainerId, timeout: TimeOut) {
+class StopRestartContainer(stopOrRestart: com.q31.dockerscala.StopRestartContainer, id: ContainerId, timeout: TimeOut) {
 
   val resourcePathStop    = s"/containers/${id}/stop"
   val resourcePathRestart = s"/containers/${id}/restart"
@@ -25,8 +25,8 @@ class StopRestartContainer(stopOrRestart: StopRestartContainer, id: ContainerId,
   }
 
 }
-object StopRestartContainer extends ((DockerClientContext, StopRestartContainer, ContainerId, TimeOut) => String) {
+object StopRestartContainer extends ((DockerClientContext, com.q31.dockerscala.StopRestartContainer, ContainerId, TimeOut) => String) {
 
-  def apply(clientContext: DockerClientContext, stopOrRestart: StopRestartContainer, id: ContainerId, timeout: TimeOut): String =
+  def apply(clientContext: DockerClientContext, stopOrRestart: com.q31.dockerscala.StopRestartContainer, id: ContainerId, timeout: TimeOut): String =
     new StopRestartContainer(stopOrRestart, id, timeout).execute(clientContext)
 }

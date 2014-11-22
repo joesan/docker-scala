@@ -18,13 +18,13 @@ trait DockerRemoteClient {
   def resizeContainer
   def startContainer
   def stopContainer(id: ContainerId, timeout: TimeOut): String
-  def restartContainer: String
+  def restartContainer(id: ContainerId, timeout: TimeOut): String
   def killContainer
   def pauseContainer(id: ContainerId): String
   def unPauseContainer(id: ContainerId): String
   def attachToContainer
   def waitAContainer
-  def removeContainer
+  def removeContainer(id: ContainerId, removeVolumes: Boolean = false)
   def copyContainerFiles
 
   /* Image API's */
@@ -66,7 +66,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def restartContainer(id: ContainerId, timeout: TimeOut): String = StopRestartContainer(context, RestartContainer, id, timeout)
 
-  override def removeContainer: Unit = ???
+  override def removeContainer(id: ContainerId, removeVolumes: Boolean): Unit = RemoveContainer(context, id, removeVolumes)
 
   override def copyContainerFiles: Unit = ???
 

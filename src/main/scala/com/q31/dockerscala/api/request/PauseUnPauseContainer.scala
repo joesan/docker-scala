@@ -6,7 +6,7 @@ import javax.ws.rs.core.MediaType
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class PauseUnPauseContainer(id: ContainerId, pauseUnPause: PauseUnPauseContainer) {
+class PauseUnPauseContainer(id: ContainerId, pauseUnPause: com.q31.dockerscala.PauseUnPauseContainer) {
 
   val pauseResourcePath   = s"/containers/${id}/pause"
   val unPauseResourcePath = s"/containers/${id}/unpause"
@@ -24,8 +24,8 @@ class PauseUnPauseContainer(id: ContainerId, pauseUnPause: PauseUnPauseContainer
   }
 
 }
-object PauseUnPauseContainer extends ((DockerClientContext, PauseUnPauseContainer, ContainerId) => String) {
+object PauseUnPauseContainer extends ((DockerClientContext, com.q31.dockerscala.PauseUnPauseContainer, ContainerId) => String) {
 
-  def apply(clientContext: DockerClientContext, pauseUnPause: PauseUnPauseContainer, id: ContainerId): String =
+  def apply(clientContext: DockerClientContext, pauseUnPause: com.q31.dockerscala.PauseUnPauseContainer, id: ContainerId): String =
     new PauseUnPauseContainer(id, pauseUnPause).execute(clientContext)
 }
