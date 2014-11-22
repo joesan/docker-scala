@@ -20,7 +20,7 @@
     <file path="/Info.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416343435047" ignored="false" />
     <file path="/a.java" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416343320046" ignored="false" />
     <file path="/DockerClientResponseFilter.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416350094903" ignored="false" />
-    <file path="/DockerRemoteClientFactory.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416428094226" ignored="false" />
+    <file path="/DockerRemoteClientFactory.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416644702463" ignored="false" />
     <file path="/JsonClientFilter.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416426132707" ignored="false" />
     <file path="/CertificateUtils.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416642300830" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,22 +83,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DockerRemoteClientFactory.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DockerRemoteClientFactory.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClientFactory.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="38" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
+            <state line="63" column="7" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.8042414">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CertificateUtils.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CertificateUtils.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/CertificateUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="53" selection-start="1063" selection-end="1063" vertical-scroll-proportion="-0.31789136">
-              <folding>
-                <element signature="e#34#50#0" expanded="true" />
-              </folding>
+            <state line="48" column="82" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,9 +142,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/Info.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/JsonClientFilter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/DockerClientConfig.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClientFactory.scala" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/CertificateUtils.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClientFactory.scala" />
       </list>
     </option>
   </component>
@@ -419,8 +417,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -439,96 +435,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dockerscala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dockerscala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,6 +481,14 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
       <setting name="path" value="" />
@@ -584,12 +502,17 @@
       <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -617,19 +540,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -666,19 +576,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -693,6 +590,19 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <list size="0" />
@@ -889,25 +799,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClientFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/io/BufferedReader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="696" selection-end="696" vertical-scroll-proportion="0.35942492">
-          <folding />
-        </state>
+        <state line="22" column="11" selection-start="696" selection-end="696" vertical-scroll-proportion="0.35942492" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/security/cert/Certificate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="170" selection-end="170" vertical-scroll-proportion="0.122349106">
-          <folding />
-        </state>
+        <state line="6" column="22" selection-start="170" selection-end="170" vertical-scroll-proportion="0.122349106" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/security/KeyStore.class">
@@ -919,10 +818,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/CertificateUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="53" selection-start="1063" selection-end="1063" vertical-scroll-proportion="-0.31789136">
-          <folding>
-            <element signature="e#34#50#0" expanded="true" />
-          </folding>
+        <state line="48" column="82" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClientFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="7" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.8042414">
+          <folding />
         </state>
       </provider>
     </entry>
