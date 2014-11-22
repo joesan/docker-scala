@@ -17,11 +17,11 @@ trait DockerRemoteClient {
   def exportContainer
   def resizeContainer
   def startContainer
-  def stopContainer
-  def restartContainer
+  def stopContainer(id: ContainerId, timeout: TimeOut): String
+  def restartContainer: String
   def killContainer
-  def pauseContainer
-  def unPauseContainer
+  def pauseContainer(id: ContainerId): String
+  def unPauseContainer(id: ContainerId): String
   def attachToContainer
   def waitAContainer
   def removeContainer
@@ -50,11 +50,11 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def containerLogs: Unit = ???
 
-  override def pauseContainer: Unit = ???
-
   override def resizeContainer: Unit = ???
 
-  override def unPauseContainer: Unit = ???
+  override def pauseContainer(id: ContainerId): String = PauseUnPauseContainer(context, PauseContainer, id)
+
+  override def unPauseContainer(id: ContainerId): String = PauseUnPauseContainer(context, UnPauseContainer, id)
 
   override def waitAContainer: Unit = ???
 
@@ -62,9 +62,9 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def attachToContainer: Unit = ???
 
-  override def stopContainer: Unit = ???
+  override def stopContainer(id: ContainerId, timeout: TimeOut): String = StopRestartContainer(context, StopContainer, id, timeout)
 
-  override def restartContainer: Unit = ???
+  override def restartContainer(id: ContainerId, timeout: TimeOut): String = StopRestartContainer(context, RestartContainer, id, timeout)
 
   override def removeContainer: Unit = ???
 
@@ -80,5 +80,5 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def info: SystemInfo = Info(context)
 
-  override def version: SystemInfo = DockerVersion(context)
+  override def version: DockerVersion = Version(context)
 }
