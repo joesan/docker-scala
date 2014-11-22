@@ -1,7 +1,7 @@
 package com.q31.dockerscala
 
 import org.scalatest.{BeforeAndAfterAll, Matchers, FlatSpec}
-import com.q31.dockerscala.domain.SystemInfo
+import com.q31.dockerscala.domain.{DockerVersion, SystemInfo}
 import com.typesafe.config.ConfigFactory
 
 /**
@@ -19,5 +19,10 @@ class DockerRemoteClientImplTest extends FlatSpec with Matchers with BeforeAndAf
     sysInfo.containers  should be > 0
     sysInfo.images      should be > 0
     sysInfo.nGoroutines should be > 0
+  }
+
+  "DockerRemoteClient#version" should "fetch Version" in {
+    val version: DockerVersion = DockerRemoteClientFactory.buildFromConfig(clientConfig).version
+    version.apiVersion  should be > "1.15"
   }
 }

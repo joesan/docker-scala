@@ -13,7 +13,11 @@ class Info {
   val resourcePath: String = "/info"
 
   def execute(dockerClientContext: DockerClientContext): SystemInfo = {
-    dockerClientContext.getBaseResource.path(resourcePath).request().accept(MediaType.APPLICATION_JSON).get(classOf[SystemInfo])
+    dockerClientContext.getBaseResource
+      .path(resourcePath)
+      .request()
+      .accept(MediaType.APPLICATION_JSON)
+      .get(classOf[SystemInfo])
   }
 }
 object Info extends (DockerClientContext => SystemInfo) {

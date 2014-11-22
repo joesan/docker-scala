@@ -2,7 +2,7 @@ package com.q31.dockerscala
 
 import com.q31.dockerscala.api.domain.Container
 import com.q31.dockerscala.api.request._
-import com.q31.dockerscala.domain.SystemInfo
+import com.q31.dockerscala.domain.{DockerVersion, SystemInfo}
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
@@ -34,6 +34,7 @@ trait DockerRemoteClient {
 
   /* Misc API's */
   def info: SystemInfo
+  def version: DockerVersion
 
 }
 // TODO... Make this class private, any instantiation should happen via defined methods!
@@ -78,4 +79,6 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
   override def inspectImage = ???
 
   override def info: SystemInfo = Info(context)
+
+  override def version: SystemInfo = DockerVersion(context)
 }
