@@ -1,10 +1,23 @@
 package com.q31.dockerscala
 
-import org.scalatest.{Matchers, FlatSpec}
+import org.scalatest.{BeforeAndAfterAll, Matchers, FlatSpec}
+import com.q31.dockerscala.domain.SystemInfo
+import com.typesafe.config.ConfigFactory
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class DockerRemoteClientImplTest extends FlatSpec with Matchers {
+class DockerRemoteClientImplTest extends FlatSpec with Matchers with BeforeAndAfterAll {
 
+  val clientConfig = ConfigFactory.load()
+
+  behavior of "DockerRemoteClient"
+
+  /* Misc API's Tests */
+  "DockerRemoteClient#info" should "fetch SystemInfo" in {
+    val sysInfo: SystemInfo = DockerRemoteClientFactory.buildFromConfig(clientConfig).info
+    sysInfo.containers  should be > 0
+    sysInfo.images      should be > 0
+    sysInfo.nGoroutines should be > 0
+  }
 }

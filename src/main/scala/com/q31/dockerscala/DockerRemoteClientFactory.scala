@@ -17,7 +17,9 @@ import scala.util.{Failure, Success}
 object DockerRemoteClientFactory {
 
   // TODO... DockerClientContext needs WebTarget
-  private lazy val clientContext: DockerClientConfig => DockerClientContext = dockerClientConfig => { new DockerClientContext(init(dockerClientConfig)) }
+  private lazy val clientContext: DockerClientConfig => DockerClientContext = dockerClientConfig => {
+    new DockerClientContext(init(dockerClientConfig))
+  }
 
   def buildFromConfig(config: Config): DockerRemoteClient = new DockerRemoteClientImpl(clientContext(DockerClientConfig.withConfig(config)))
 
@@ -44,12 +46,11 @@ object DockerRemoteClientFactory {
 
     if (dockerCertPath != null && CertificateUtils.verifyCertificatesExist(dockerCertPath)) {
       Security.addProvider(new BouncyCastleProvider())
-
-      // properties acrobatics not needed for java > 1.6
-      val httpProtocols = System.getProperty("https.protocols")
-      System.setProperty("https.protocols", "TLSv1")
       val sslConfig = SslConfigurator.newInstance(true)
-      if (httpProtocols != null) System.setProperty("https.protocols", httpProtocols)
+
+      /*val httpProtocols = System.getProperty("https.protocols")
+      System.setProperty("https.protocols", "TLSv1")
+      if (httpProtocols != null) System.setProperty("https.protocols", httpProtocols)*/
 
       CertificateUtils.createKeyStore(dockerCertPath) match {
         case Success(suck) => {
