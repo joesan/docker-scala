@@ -1,5 +1,7 @@
 package com.q31.dockerscala.api.request.params
 
+import com.q31.dockerscala.ImageName
+
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
@@ -8,4 +10,5 @@ object RequestParam {
   case class ContainerLogReqParam(follow: Boolean = false, stdout: Boolean = false, stderr: Boolean = false,
                                   timestamps: Boolean = false, tail: String = "all")
 
+  case class TagImageReqParam(imageName: ImageName, repo: String, tag: String, force: Boolean = false)
 }

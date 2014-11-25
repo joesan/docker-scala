@@ -19,7 +19,9 @@ class CreateContainer {
       case Some(value) => webResource.queryParam("name", value)
       case None        => println("no name specified for container")
     }
-    webResource.request().accept(MediaType.APPLICATION_JSON).post(entity(params, MediaType.APPLICATION_JSON), classOf[CreateContainerResponse])
+    webResource.request()
+      .accept(MediaType.APPLICATION_JSON)
+      .post(entity(params, MediaType.APPLICATION_JSON), classOf[CreateContainerResponse])
   }
 }
 object CreateContainer extends ((DockerClientContext, CreateContainerParams, Option[String]) => CreateContainerResponse) {
