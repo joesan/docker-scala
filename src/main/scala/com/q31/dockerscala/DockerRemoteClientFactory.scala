@@ -48,9 +48,9 @@ object DockerRemoteClientFactory {
       Security.addProvider(new BouncyCastleProvider())
       val sslConfig = SslConfigurator.newInstance(true)
 
-      /*val httpProtocols = System.getProperty("https.protocols")
+      val httpProtocols = System.getProperty("https.protocols")
       System.setProperty("https.protocols", "TLSv1")
-      if (httpProtocols != null) System.setProperty("https.protocols", httpProtocols)*/
+      if (httpProtocols != null) System.setProperty("https.protocols", httpProtocols)
 
       CertificateUtils.createKeyStore(dockerCertPath) match {
         case Success(suck) => {
@@ -66,10 +66,7 @@ object DockerRemoteClientFactory {
 
       clientBuilder.sslContext(sslConfig.createSSLContext())
     }
-
-    val client = clientBuilder.build();
-
-    val webResource = client.target(dockerClientConfig.uri)
+    val webResource = clientBuilder.build().target(dockerClientConfig.uri)
 
     if (dockerClientConfig.version.isEmpty) webResource
     else webResource.path("v" + dockerClientConfig.version)

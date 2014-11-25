@@ -13,11 +13,11 @@ class PauseUnPauseContainer(id: ContainerId, pauseUnPause: com.q31.dockerscala.P
 
   def execute(dockerClientContext: DockerClientContext): String = {
     val webResource = dockerClientContext.getBaseResource
-    val pauseUnPause = pauseUnPause match {
+    val resourcePath = pauseUnPause match {
         case PauseContainer   => pauseResourcePath
         case UnPauseContainer => unPauseResourcePath
       }
-    webResource.path(pauseUnPause)
+    webResource.path(resourcePath)
       .request()
       .accept(MediaType.APPLICATION_JSON)
       .get(classOf[String])

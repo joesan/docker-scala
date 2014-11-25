@@ -18,7 +18,7 @@ class StopRestartContainer(stopOrRestart: com.q31.dockerscala.StopRestartContain
       case RestartContainer => resourcePathRestart
     }
     webResource.path(resourcePath)
-      .queryParam("t", timeout)
+      .queryParam("t", Integer.valueOf(timeout))
       .request()
       .accept(MediaType.APPLICATION_JSON)
       .get(classOf[String])
