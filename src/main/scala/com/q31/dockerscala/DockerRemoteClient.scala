@@ -2,7 +2,9 @@ package com.q31.dockerscala
 
 import com.q31.dockerscala.api.domain.Container
 import com.q31.dockerscala.api.request._
-import com.q31.dockerscala.domain.{DockerVersion, SystemInfo}
+import com.q31.dockerscala.domain.{Top, DockerVersion, SystemInfo}
+import com.q31.dockerscala.api.request.params.RequestParam.ContainerLogReqParam
+import java.io.InputStream
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
@@ -12,8 +14,8 @@ trait DockerRemoteClient {
   /* Container API's */
   def listContainers(params: ListContainersParam): List[Container]
   def createContainer(params: CreateContainerParams, name: Option[String] = None)
-  def runningProcesses
-  def containerLogs
+  def runningProcesses(id: ContainerId, ps_args: String): Top
+  def containerLogs(id: ContainerId, params: ContainerLogReqParam): InputStream
   def exportContainer
   def resizeContainer
   def startContainer
@@ -44,11 +46,11 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def createContainer(params: CreateContainerParams, name: Option[String]): Unit = CreateContainer(context, params, name)
 
-  override def runningProcesses = ???
+  override def runningProcesses(id: ContainerId, ps_args: String) = TopProcesses(context, id, ps_args)
 
   override def killContainer = ???
 
-  override def containerLogs: Unit = ???
+  override def containerLogs(id: ContainerId, params: ContainerLogReqParam): InputStream = ContainerLogs(context, id, params)
 
   override def resizeContainer: Unit = ???
 

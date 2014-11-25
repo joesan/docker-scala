@@ -26,7 +26,7 @@
     <file path="/DockerRemoteClientImplTest.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416653124871" ignored="false" />
     <file path="/SystemInfo.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416650921768" ignored="false" />
     <file path="/Version.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416653742700" ignored="false" />
-    <file path="/DockerRemoteClient.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416680317458" ignored="false" />
+    <file path="/DockerRemoteClient.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416949911200" ignored="false" />
     <file path="/StopContainer.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416661727141" ignored="false" />
     <file path="/PauseContainer.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416662896035" ignored="false" />
     <file path="/package.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416732203689" ignored="false" />
@@ -126,6 +126,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DockerRemoteClient.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="101" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.24844721">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopProcesses.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/TopProcesses.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="60" selection-start="396" selection-end="399" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RequestParam.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
           <provider selected="true" editor-type-id="text-editor">
@@ -135,13 +153,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContainerLogs.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ContainerLogs.scala">
+      <file leaf-file-name="DockerClientContext.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerClientContext.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="1" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.7777778">
-              <folding>
-                <element signature="e#41#102#0" expanded="true" />
-              </folding>
+            <state line="7" column="6" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/Info.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/PauseContainer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/StopContainer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/RemoveContainer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/package.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/TagImage.scala" />
@@ -205,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/ContainerLogReqParam.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ContainerLogs.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala" />
       </list>
     </option>
   </component>
@@ -626,6 +642,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="DockerRemoteClient.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docker-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docker-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dockerscala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -728,7 +774,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Info.scala" />
+              <option name="myItemId" value="TopProcesses.scala" />
               <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -994,7 +1040,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3027523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16360857" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1004,7 +1050,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20259319" sideWeight="0.6972477" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18638574" sideWeight="0.83639145" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4266055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1090,22 +1136,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/Version.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="75" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/RemoveContainer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="138" selection-end="190" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#41#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/TagImage.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="69" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
@@ -1130,13 +1160,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/CertificateUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="45" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.21993127">
           <folding />
         </state>
       </provider>
@@ -1196,6 +1219,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerClientContext.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ContainerLogs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="65" selection-start="343" selection-end="363" vertical-scroll-proportion="0.18346775">
+          <folding>
+            <element signature="e#41#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="44" selection-start="267" selection-end="277" vertical-scroll-proportion="0.0">
@@ -1203,12 +1242,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ContainerLogs.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/TopProcesses.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="1" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.7777778">
-          <folding>
-            <element signature="e#41#102#0" expanded="true" />
-          </folding>
+        <state line="12" column="60" selection-start="396" selection-end="399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="101" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.24844721">
+          <folding />
         </state>
       </provider>
     </entry>
