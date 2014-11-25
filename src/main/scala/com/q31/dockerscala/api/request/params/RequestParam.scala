@@ -11,4 +11,6 @@ object RequestParam {
                                   timestamps: Boolean = false, tail: String = "all")
 
   case class TagImageReqParam(imageName: ImageName, repo: String, tag: String, force: Boolean = false)
+
+  case class AuthReqParam(username: String, password: String, email: String, serverAddress: String)
 }

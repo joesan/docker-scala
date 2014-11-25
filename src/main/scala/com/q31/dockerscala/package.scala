@@ -8,6 +8,7 @@ package object dockerscala {
   type ContainerId = String
   type TimeOut = Int
   type ImageName = String
+  type AuthStatus = Int
 
   sealed trait PauseUnPauseContainer
   case object  PauseContainer extends PauseUnPauseContainer
