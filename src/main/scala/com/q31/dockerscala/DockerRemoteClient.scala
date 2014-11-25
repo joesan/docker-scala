@@ -21,7 +21,7 @@ trait DockerRemoteClient {
   def startContainer
   def stopContainer(id: ContainerId, timeout: TimeOut): String
   def restartContainer(id: ContainerId, timeout: TimeOut): String
-  def killContainer
+  def killContainer(id: ContainerId, signal: Option[String]): Unit
   def pauseContainer(id: ContainerId): String
   def unPauseContainer(id: ContainerId): String
   def attachToContainer
@@ -48,7 +48,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def runningProcesses(id: ContainerId, ps_args: String) = TopProcesses(context, id, ps_args)
 
-  override def killContainer = ???
+  override def killContainer(id: ContainerId, signal: Option[String]) = ???
 
   override def containerLogs(id: ContainerId, params: ContainerLogReqParam): InputStream = ContainerLogs(context, id, params)
 
