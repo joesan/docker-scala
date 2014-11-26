@@ -36,6 +36,11 @@ trait DockerRemoteClient {
   def listImages
   def createImage
   def inspectImage
+  def imageHistory
+  def pushImageRegistry
+  def tagImageRegistry
+  def removeImage
+  def searchImages
 
   /* Misc API's */
   def buildImage
@@ -100,13 +105,22 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def inspectImage = ???
 
+  def imageHistory: Unit = ???
+
+  def searchImages: Unit = ???
+
+  def removeImage: Unit = ???
+
+  def tagImageRegistry: Unit = ???
+
+  def pushImageRegistry: Unit = ???
+
   // Misc API
 
   override def info: SystemInfo = Info(context)
 
   override def version: DockerVersion = Version(context)
 
-  /* Misc API's */
   def buildImage: Unit = ???
 
   def ping: Unit = ???
