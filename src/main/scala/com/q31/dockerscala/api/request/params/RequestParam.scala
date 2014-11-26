@@ -2,6 +2,7 @@ package com.q31.dockerscala.api.request.params
 
 import com.q31.dockerscala.ImageName
 import com.q31.dockerscala.domain.{Bind, Link}
+import com.q31.dockerscala.api.domain.Port
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
@@ -15,5 +16,5 @@ object RequestParam {
 
   case class AuthReqParam(username: String, password: String, email: String, serverAddress: String)
 
-  case class StartContainerParams(binds: List[Bind], links: List[Link], ports: )
+  case class StartContainerParams(binds: List[Bind], links: List[Link], ports: Port)
 }
