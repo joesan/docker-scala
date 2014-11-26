@@ -2,9 +2,10 @@ package com.q31.dockerscala
 
 import com.q31.dockerscala.api.domain.Container
 import com.q31.dockerscala.api.request._
-import com.q31.dockerscala.domain.{Top, DockerVersion, SystemInfo}
+import com.q31.dockerscala.domain.{ContainerChangeLog, Top, DockerVersion, SystemInfo}
 import com.q31.dockerscala.api.request.params.RequestParam.ContainerLogReqParam
 import java.io.InputStream
+import com.q31.dockerscala.api.response.InspectContainerResponse
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
@@ -14,11 +15,13 @@ trait DockerRemoteClient {
   /* Container API's */
   def listContainers(params: ListContainersParam): List[Container]
   def createContainer(params: CreateContainerParams, name: Option[String] = None)
+  def inspectContainer(id: ContainerId): InspectContainerResponse
   def runningProcesses(id: ContainerId, ps_args: String): Top
   def containerLogs(id: ContainerId, params: ContainerLogReqParam): InputStream
-  def exportContainer
-  def resizeContainer
-  def startContainer
+  def containerDiff(id: ContainerId): List[ContainerChangeLog]
+  def exportContainer(id: ContainerId): InputStream
+  def resizeContainer(id: ContainerId, height: Int, width: Int)
+  def startContainer(params: StartContainerParams): Unit
   def stopContainer(id: ContainerId, timeout: TimeOut): String
   def restartContainer(id: ContainerId, timeout: TimeOut): String
   def killContainer(id: ContainerId, signal: Option[String]): Unit
@@ -39,28 +42,34 @@ trait DockerRemoteClient {
   def version: DockerVersion
 
 }
-// TODO... Make this class private, any instantiation should happen via defined methods!
+// TODO... Make this class private, any instantiation should happen via factory methods!
 class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRemoteClient {
 
   override def listContainers(params: ListContainersParam): List[Container] = ListContainers(context, params)
 
   override def createContainer(params: CreateContainerParams, name: Option[String]): Unit = CreateContainer(context, params, name)
 
-  override def runningProcesses(id: ContainerId, ps_args: String) = TopProcesses(context, id, ps_args)
+  override def inspectContainer(id: ContainerId): InspectContainerResponse = InspectContainer(context, id)
 
-  override def killContainer(id: ContainerId, signal: Option[String]) = ???
+  override def runningProcesses(id: ContainerId, ps_args: String) = TopProcesses(context, id, ps_args)
 
   override def containerLogs(id: ContainerId, params: ContainerLogReqParam): InputStream = ContainerLogs(context, id, params)
 
-  override def resizeContainer: Unit = ???
+  override def containerDiff(id: ContainerId): List[ContainerChangeLog] = ContainerDiff(context, id)
+
+  override def exportContainer(id: ContainerId): InputStream = ExportContainer(context, id)
+
+  override def resizeContainer(id: ContainerId, height: Int, width: Int): Unit = ResizeContainer(context, id, height, width)
+
+  override def startContainer(params: StartContainerParams): Unit = ???
+
+  override def killContainer(id: ContainerId, signal: Option[String]) = ???
 
   override def pauseContainer(id: ContainerId): String = PauseUnPauseContainer(context, PauseContainer, id)
 
   override def unPauseContainer(id: ContainerId): String = PauseUnPauseContainer(context, UnPauseContainer, id)
 
   override def waitAContainer: Unit = ???
-
-  override def startContainer: Unit = ???
 
   override def attachToContainer: Unit = ???
 
