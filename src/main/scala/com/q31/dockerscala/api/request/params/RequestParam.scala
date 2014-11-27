@@ -17,4 +17,7 @@ object RequestParam {
   case class AuthReqParam(username: String, password: String, email: String, serverAddress: String)
 
   case class StartContainerParams(binds: List[Bind], links: List[Link], ports: Port)
+
+  case class AttachToContainerParams(logs: Boolean = false, stream: Boolean = false, stdin: Boolean = false,
+                                     stdout: Boolean = false, stderr: Boolean = false)
 }

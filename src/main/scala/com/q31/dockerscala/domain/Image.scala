@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 class Image(@JsonProperty("RepoTags") repoTags: Array[String],
             @JsonProperty("Size") size: Long,
             @JsonProperty("Created") created: Long,
+            @JsonProperty("CreatedBy") createdBy: String,
             @JsonProperty("Id") id: String,
             @JsonProperty("ParentId") parentId: String,
             @JsonProperty("VirtualSize") virtualSize: Long,
