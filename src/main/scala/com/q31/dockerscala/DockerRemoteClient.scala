@@ -3,10 +3,10 @@ package com.q31.dockerscala
 import com.q31.dockerscala.api.request._
 import com.q31.dockerscala.domain._
 import java.io.InputStream
-import com.q31.dockerscala.api.request.params.RequestParam.AttachToContainerParams
+import com.q31.dockerscala.api.request.params.RequestParam.AttachToContainerReqParams
 import com.q31.dockerscala.api.request.CreateContainerParams
 import com.q31.dockerscala.domain.DockerVersion
-import com.q31.dockerscala.api.request.params.RequestParam.StartContainerParams
+import com.q31.dockerscala.api.request.params.RequestParam.StartContainerReqParams
 import com.q31.dockerscala.api.request.ListContainersParam
 import com.q31.dockerscala.api.domain.Container
 import com.q31.dockerscala.api.response.InspectContainerResponse
@@ -27,13 +27,13 @@ trait DockerRemoteClient {
   def containerDiff(id: ContainerId): List[ContainerChangeLog]
   def exportContainer(id: ContainerId): InputStream
   def resizeContainer(id: ContainerId, height: Int, width: Int)
-  def startContainer(id: ContainerId, params: StartContainerParams): Unit
+  def startContainer(id: ContainerId, params: StartContainerReqParams): Unit
   def stopContainer(id: ContainerId, timeout: TimeOut): String
   def restartContainer(id: ContainerId, timeout: TimeOut): String
   def killContainer(id: ContainerId, signal: Option[String]): Unit
   def pauseContainer(id: ContainerId): String
   def unPauseContainer(id: ContainerId): String
-  def attachToContainer(id: ContainerId, params: AttachToContainerParams): InputStream
+  def attachToContainer(id: ContainerId, params: AttachToContainerReqParams): InputStream
   def waitAContainer(id: ContainerId): Int
   def removeContainer(id: ContainerId, removeVolumes: Boolean = false)
   def copyContainerFiles(id: ContainerId, resource: String): InputStream
@@ -83,7 +83,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def resizeContainer(id: ContainerId, height: Int, width: Int): Unit = ResizeContainer(context, id, height, width)
 
-  override def startContainer(id: ContainerId, params: StartContainerParams): Unit = StartContainer(context, id, params)
+  override def startContainer(id: ContainerId, params: StartContainerReqParams): Unit = StartContainer(context, id, params)
 
   override def stopContainer(id: ContainerId, timeout: TimeOut): String = StopRestartContainer(context, StopContainer, id, timeout)
 
@@ -95,7 +95,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def unPauseContainer(id: ContainerId): String = PauseUnPauseContainer(context, UnPauseContainer, id)
 
-  override def attachToContainer(id: ContainerId, params: AttachToContainerParams): InputStream = AttachToContainer(context, id, params)
+  override def attachToContainer(id: ContainerId, params: AttachToContainerReqParams): InputStream = AttachToContainer(context, id, params)
 
   override def waitAContainer(id: ContainerId): Int = WaitAContainer(context, id)
 
