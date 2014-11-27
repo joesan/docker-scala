@@ -3,13 +3,17 @@ package com.q31.dockerscala
 import com.q31.dockerscala.api.request._
 import com.q31.dockerscala.domain._
 import java.io.InputStream
-import com.q31.dockerscala.api.request.params.RequestParam.{CreateImageReqParams, AttachToContainerReqParams, StartContainerReqParams, ContainerLogReqParam}
-import com.q31.dockerscala.api.request.CreateContainerParams
+import com.q31.dockerscala.api.request.params.RequestParam._
+import com.q31.dockerscala.api.response._
 import com.q31.dockerscala.domain.DockerVersion
+import com.q31.dockerscala.api.request.params.RequestParam.StartContainerReqParam
 import com.q31.dockerscala.api.request.ListContainersParam
+import com.q31.dockerscala.api.request.params.RequestParam.CreateImageReqParam
+import com.q31.dockerscala.api.request.params.RequestParam.AttachToContainerReqParam
 import com.q31.dockerscala.api.domain.Container
-import com.q31.dockerscala.api.response.{InspectImageResponse, InspectContainerResponse}
+import com.q31.dockerscala.api.response.InspectContainerResponse
 import com.q31.dockerscala.domain.SystemInfo
+import com.q31.dockerscala.api.request.params.RequestParam.ContainerLogReqParam
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
@@ -18,36 +22,36 @@ import com.q31.dockerscala.domain.SystemInfo
 trait DockerRemoteClient {
   /* Container API's */
   def listContainers(params: ListContainersParam): List[Container]
-  def createContainer(params: CreateContainerParams, name: Option[String] = None)
+  def createContainer(params: CreateContainerReqParam, name: Option[String] = None)
   def inspectContainer(id: ContainerId): InspectContainerResponse
   def runningProcesses(id: ContainerId, ps_args: String): Top
   def containerLogs(id: ContainerId, params: ContainerLogReqParam): InputStream
   def containerDiff(id: ContainerId): List[ContainerChangeLog]
   def exportContainer(id: ContainerId): InputStream
   def resizeContainer(id: ContainerId, height: Int, width: Int)
-  def startContainer(id: ContainerId, params: StartContainerReqParams): Unit
+  def startContainer(id: ContainerId, params: StartContainerReqParam): Unit
   def stopContainer(id: ContainerId, timeout: TimeOut): String
   def restartContainer(id: ContainerId, timeout: TimeOut): String
   def killContainer(id: ContainerId, signal: Option[String]): Unit
   def pauseContainer(id: ContainerId): String
   def unPauseContainer(id: ContainerId): String
-  def attachToContainer(id: ContainerId, params: AttachToContainerReqParams): InputStream
+  def attachToContainer(id: ContainerId, params: AttachToContainerReqParam): InputStream
   def waitAContainer(id: ContainerId): Int
   def removeContainer(id: ContainerId, removeVolumes: Boolean = false)
   def copyContainerFiles(id: ContainerId, resource: String): InputStream
 
   /* Image API's */
   def listImages(all: Boolean, filter: String): List[Image]
-  def createImage(params: CreateImageReqParams): String
+  def createImage(params: CreateImageReqParam): String
   def inspectImage(name: ImageName): InspectImageResponse
   def imageHistory(name: ImageName): Image
   def pushImageRegistry(authConfig: AuthConfig): InputStream
-  def tagImageRegistry
-  def removeImage
-  def searchImages
+  def tagImage(params: TagImageReqParam)
+  def removeImage(name: ImageName, force: Boolean, noPrune: Boolean): Unit
+  def searchImages(searchTerm: String): List[SearchImageResponse]
 
   /* Misc API's */
-  def buildImage
+  def buildImage(params: BuildImageReqParam): Unit
   def info: SystemInfo
   def ping
   def commit
@@ -67,7 +71,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def listContainers(params: ListContainersParam): List[Container] = ListContainers(context, params)
 
-  override def createContainer(params: CreateContainerParams, name: Option[String]): Unit = CreateContainer(context, params, name)
+  override def createContainer(params: CreateContainerReqParam, name: Option[String]): Unit = CreateContainer(context, params, name)
 
   override def inspectContainer(id: ContainerId): InspectContainerResponse = InspectContainer(context, id)
 
@@ -81,7 +85,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def resizeContainer(id: ContainerId, height: Int, width: Int): Unit = ResizeContainer(context, id, height, width)
 
-  override def startContainer(id: ContainerId, params: StartContainerReqParams): Unit = StartContainer(context, id, params)
+  override def startContainer(id: ContainerId, params: StartContainerReqParam): Unit = StartContainer(context, id, params)
 
   override def stopContainer(id: ContainerId, timeout: TimeOut): String = StopRestartContainer(context, StopContainer, id, timeout)
 
@@ -93,7 +97,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def unPauseContainer(id: ContainerId): String = PauseUnPauseContainer(context, UnPauseContainer, id)
 
-  override def attachToContainer(id: ContainerId, params: AttachToContainerReqParams): InputStream = AttachToContainer(context, id, params)
+  override def attachToContainer(id: ContainerId, params: AttachToContainerReqParam): InputStream = AttachToContainer(context, id, params)
 
   override def waitAContainer(id: ContainerId): Int = WaitAContainer(context, id)
 
@@ -105,7 +109,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def listImages(all: Boolean, filter: String): List[Image] = ListImages(context, all, filter)
 
-  override def createImage(params: CreateImageReqParams): String = CreateImage(context, params)
+  override def createImage(params: CreateImageReqParam): String = CreateImage(context, params)
 
   override def inspectImage(name: ImageName): InspectImageResponse = InspectImage(context, name)
 
@@ -113,11 +117,11 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def pushImageRegistry(authConfig: AuthConfig): InputStream = PushImage(context, authConfig)
 
-  override def searchImages: Unit = ???
+  override def searchImages(searchTerm: String): List[SearchImageResponse] = SearchImages(context, searchTerm)
 
-  override def removeImage: Unit = ???
+  override def removeImage(name: ImageName, force: Boolean, noPrune: Boolean): Unit = RemoveImage(context, name, force, noPrune)
 
-  override def tagImageRegistry: Unit = ???
+  override def tagImage(params: TagImageReqParam): Unit = TagImage(context, params)
 
   // Misc API
 
@@ -125,7 +129,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def version: DockerVersion = Version(context)
 
-  override def buildImage: Unit = ???
+  override def buildImage(params: BuildImageReqParam): Unit = BuildImage(context, params)
 
   def ping: Unit = Ping(context)
 

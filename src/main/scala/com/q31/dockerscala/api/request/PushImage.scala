@@ -21,7 +21,6 @@ class PushImage(authConfig: AuthConfig) {
       .accept(MediaType.APPLICATION_JSON)
     .post(entity(classOf[Response], MediaType.APPLICATION_JSON), classOf[InputStream])
   }
-
 }
 object PushImage extends ((DockerClientContext, AuthConfig) => InputStream) {
 

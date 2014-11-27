@@ -1,6 +1,6 @@
 package com.q31.dockerscala.api.request
 
-import com.q31.dockerscala.api.request.params.RequestParam.StartContainerReqParams
+import com.q31.dockerscala.api.request.params.RequestParam.StartContainerReqParam
 import com.q31.dockerscala.{ContainerId, DockerClientContext}
 import javax.ws.rs.core.MediaType
 import javax.ws.rs.client.Entity.entity
@@ -8,7 +8,7 @@ import javax.ws.rs.client.Entity.entity
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class StartContainer(id: ContainerId, params: StartContainerReqParams) {
+class StartContainer(id: ContainerId, params: StartContainerReqParam) {
 
   val resourcePath = s"/containers/${id}/start"
 
@@ -21,8 +21,8 @@ class StartContainer(id: ContainerId, params: StartContainerReqParams) {
   }
 
 }
-object StartContainer extends ((DockerClientContext, ContainerId, StartContainerReqParams) => Unit) {
+object StartContainer extends ((DockerClientContext, ContainerId, StartContainerReqParam) => Unit) {
 
-  def apply(clientContext: DockerClientContext, id: ContainerId, params: StartContainerReqParams): Unit =
+  def apply(clientContext: DockerClientContext, id: ContainerId, params: StartContainerReqParam): Unit =
     new StartContainer(id, params).execute(clientContext)
 }

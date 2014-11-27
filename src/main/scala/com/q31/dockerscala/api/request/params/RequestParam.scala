@@ -10,6 +10,10 @@ import java.io.InputStream
  */
 object RequestParam {
 
+  case class CreateContainerReqParam()
+
+  case class BuildImageReqParam(t: String, q: Boolean, nocache: Boolean, rm: String, forcerm: Boolean)
+
   case class ContainerLogReqParam(follow: Boolean = false, stdout: Boolean = false, stderr: Boolean = false,
                                   timestamps: Boolean = false, tail: String = "all")
 
@@ -17,10 +21,10 @@ object RequestParam {
 
   case class AuthReqParam(username: String, password: String, email: String, serverAddress: String)
 
-  case class StartContainerReqParams(binds: List[Bind], links: List[Link], ports: Port)
+  case class StartContainerReqParam(binds: List[Bind], links: List[Link], ports: Port)
 
-  case class AttachToContainerReqParams(logs: Boolean = false, stream: Boolean = false, stdin: Boolean = false,
+  case class AttachToContainerReqParam(logs: Boolean = false, stream: Boolean = false, stdin: Boolean = false,
                                      stdout: Boolean = false, stderr: Boolean = false)
 
-  case class CreateImageReqParams(fromImage: String, fromSrc: String, repo: String, tag: String, imageStream: InputStream)
+  case class CreateImageReqParam(fromImage: String, fromSrc: String, repo: String, tag: String, imageStream: InputStream)
 }
