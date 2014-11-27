@@ -1,10 +1,11 @@
 package com.q31.dockerscala.domain
 
-import com.fasterxml.jackson.annotation.JsonProperty
+import com.fasterxml.jackson.annotation.{JsonIgnoreProperties, JsonProperty}
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 class ContainerConfig(@JsonProperty("HostName") hostName: String,
                       @JsonProperty("User") created: String,
                       @JsonProperty("Memory") memory: Long,

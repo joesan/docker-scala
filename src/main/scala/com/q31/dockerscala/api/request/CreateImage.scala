@@ -20,7 +20,7 @@ private class CreateImage(params: CreateImageReqParams) {
       .queryParam("fromSrc", params.fromSrc)
       .request()
       .accept(MediaType.APPLICATION_OCTET_STREAM_TYPE)
-      .post(entity(params.imageStream, MediaType.APPLICATION_OCTET_STREAM), classOf[String])
+    .post(entity(params.imageStream, MediaType.APPLICATION_OCTET_STREAM), classOf[String])
   }
 }
 object CreateImage extends ((DockerClientContext, CreateImageReqParams) => String){

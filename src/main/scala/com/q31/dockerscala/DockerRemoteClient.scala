@@ -3,15 +3,13 @@ package com.q31.dockerscala
 import com.q31.dockerscala.api.request._
 import com.q31.dockerscala.domain._
 import java.io.InputStream
-import com.q31.dockerscala.api.request.params.RequestParam.AttachToContainerReqParams
+import com.q31.dockerscala.api.request.params.RequestParam.{CreateImageReqParams, AttachToContainerReqParams, StartContainerReqParams, ContainerLogReqParam}
 import com.q31.dockerscala.api.request.CreateContainerParams
 import com.q31.dockerscala.domain.DockerVersion
-import com.q31.dockerscala.api.request.params.RequestParam.StartContainerReqParams
 import com.q31.dockerscala.api.request.ListContainersParam
 import com.q31.dockerscala.api.domain.Container
-import com.q31.dockerscala.api.response.InspectContainerResponse
+import com.q31.dockerscala.api.response.{InspectImageResponse, InspectContainerResponse}
 import com.q31.dockerscala.domain.SystemInfo
-import com.q31.dockerscala.api.request.params.RequestParam.ContainerLogReqParam
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
@@ -40,10 +38,10 @@ trait DockerRemoteClient {
 
   /* Image API's */
   def listImages(all: Boolean, filter: String): List[Image]
-  def createImage
-  def inspectImage(name: ImageName): Image
+  def createImage(params: CreateImageReqParams): String
+  def inspectImage(name: ImageName): InspectImageResponse
   def imageHistory(name: ImageName): Image
-  def pushImageRegistry
+  def pushImageRegistry(authConfig: AuthConfig): InputStream
   def tagImageRegistry
   def removeImage
   def searchImages
@@ -107,19 +105,19 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def listImages(all: Boolean, filter: String): List[Image] = ListImages(context, all, filter)
 
-  override def createImage = ???
+  override def createImage(params: CreateImageReqParams): String = CreateImage(context, params)
 
-  override def inspectImage(name: ImageName): Image = InspectImage(context, name)
+  override def inspectImage(name: ImageName): InspectImageResponse = InspectImage(context, name)
 
-  def imageHistory(name: ImageName): Image = ImageHistory(context, name)
+  override def imageHistory(name: ImageName): Image = ImageHistory(context, name)
 
-  def searchImages: Unit = ???
+  override def pushImageRegistry(authConfig: AuthConfig): InputStream = PushImage(context, authConfig)
 
-  def removeImage: Unit = ???
+  override def searchImages: Unit = ???
 
-  def tagImageRegistry: Unit = ???
+  override def removeImage: Unit = ???
 
-  def pushImageRegistry: Unit = ???
+  override def tagImageRegistry: Unit = ???
 
   // Misc API
 
@@ -127,7 +125,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def version: DockerVersion = Version(context)
 
-  def buildImage: Unit = ???
+  override def buildImage: Unit = ???
 
   def ping: Unit = Ping(context)
 
