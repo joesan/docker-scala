@@ -1,7 +1,6 @@
 package com.q31.dockerscala.api.request
 
 import com.q31.dockerscala.DockerClientContext
-import com.q31.dockerscala.api.request.params.RequestParam.BuildImageReqParam
 import javax.ws.rs.core.{Response, MediaType}
 import javax.ws.rs.client.Entity._
 import com.q31.dockerscala.api.request.params.RequestParam.BuildImageReqParam
