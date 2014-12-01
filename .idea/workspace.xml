@@ -26,7 +26,7 @@
     <file path="/DockerRemoteClientImplTest.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416653124871" ignored="false" />
     <file path="/SystemInfo.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416650921768" ignored="false" />
     <file path="/Version.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416653742700" ignored="false" />
-    <file path="/DockerRemoteClient.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417121067316" ignored="false" />
+    <file path="/DockerRemoteClient.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417414066200" ignored="false" />
     <file path="/StopContainer.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416661727141" ignored="false" />
     <file path="/PauseContainer.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416662896035" ignored="false" />
     <file path="/package.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416952599453" ignored="false" />
@@ -64,7 +64,7 @@
     <file path="/AuthConfig.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417118077085" ignored="false" />
     <file path="/SearchImages.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417118864912" ignored="false" />
     <file path="/SearchImageResponse.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417118783686" ignored="false" />
-    <file path="/BuildImage.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417121675603" ignored="false" />
+    <file path="/BuildImage.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417414026027" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,7 @@
       <file leaf-file-name="DockerRemoteClient.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="68" selection-start="6214" selection-end="6214" vertical-scroll-proportion="3.3305085">
+            <state line="53" column="67" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.2925532">
               <folding>
                 <element signature="e#29#69#0" expanded="true" />
               </folding>
@@ -196,17 +196,10 @@
       <file leaf-file-name="BuildImage.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/BuildImage.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.conf" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/application.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="12" column="29" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#41#87#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -242,10 +235,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/CreateImage.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/CreateContainer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/RemoveImage.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/PushImage.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/BuildImage.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala" />
       </list>
     </option>
   </component>
@@ -1021,7 +1014,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="1" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1167,20 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/CreateContainer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="75" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/RemoveImage.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="67" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/DockerAPI.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="6" selection-start="140" selection-end="140" vertical-scroll-proportion="0.17412935">
@@ -1203,13 +1182,6 @@
           <folding>
             <element signature="e#41#87#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/BuildImage.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,9 +1213,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/RemoveImage.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="67" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/CreateContainer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="75" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/BuildImage.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/DockerRemoteClient.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="68" selection-start="6214" selection-end="6214" vertical-scroll-proportion="3.3305085">
+        <state line="53" column="67" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.2925532">
           <folding>
             <element signature="e#29#69#0" expanded="true" />
           </folding>

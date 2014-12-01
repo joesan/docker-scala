@@ -5,11 +5,13 @@ import javax.ws.rs.core.{Response, MediaType}
 import javax.ws.rs.client.Entity._
 import com.q31.dockerscala.api.request.params.RequestParam.BuildImageReqParam
 import java.io.InputStream
+import com.q31.dockerscala.domain.AuthConfig
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class BuildImage(params: BuildImageReqParam) {
+// TODO... Check correctness!
+class BuildImage(params: BuildImageReqParam, authConfig: AuthConfig) {
 
   val resourcePath = "/build"
 
@@ -25,8 +27,8 @@ class BuildImage(params: BuildImageReqParam) {
       .post(entity(classOf[Response], MediaType.APPLICATION_JSON), classOf[InputStream])
   }
 }
-object BuildImage extends ((DockerClientContext, BuildImageReqParam) => String) {
+object BuildImage extends ((DockerClientContext, BuildImageReqParam, AuthConfig) => String) {
 
-  def apply(clientContext: DockerClientContext, params: BuildImageReqParam): String =
-    new BuildImage(params).execute(clientContext)
+  def apply(clientContext: DockerClientContext, params: BuildImageReqParam, authConfig: AuthConfig): InputStream =
+    new BuildImage(params, authConfig).execute(clientContext)
 }

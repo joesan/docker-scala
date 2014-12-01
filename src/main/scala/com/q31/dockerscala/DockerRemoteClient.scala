@@ -51,7 +51,7 @@ trait DockerRemoteClient {
   def searchImages(searchTerm: String): List[SearchImageResponse]
 
   /* Misc API's */
-  def buildImage(params: BuildImageReqParam): Unit
+  def buildImage(params: BuildImageReqParam, authConfig: AuthConfig): InputStream
   def info: SystemInfo
   def ping
   def commit
@@ -129,7 +129,7 @@ class DockerRemoteClientImpl(val context: DockerClientContext) extends DockerRem
 
   override def version: DockerVersion = Version(context)
 
-  override def buildImage(params: BuildImageReqParam): Unit = BuildImage(context, params)
+  override def buildImage(params: BuildImageReqParam, authConfig: AuthConfig): InputStream = BuildImage(context, params, authConfig)
 
   def ping: Unit = Ping(context)
 
