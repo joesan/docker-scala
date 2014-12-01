@@ -7,7 +7,7 @@ import com.typesafe.config.ConfigFactory
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
-class DockerRemoteClientImplTest extends FlatSpec with Matchers with BeforeAndAfterAll {
+class DockerRemoteClientImplTest extends FlatSpec with Matchers {
 
   val clientConfig = ConfigFactory.load()
 
