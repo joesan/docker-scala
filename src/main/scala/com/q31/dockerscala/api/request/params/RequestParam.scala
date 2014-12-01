@@ -10,6 +10,10 @@ import java.io.InputStream
  */
 object RequestParam {
 
+  case class ListContainersReqParam(all: Boolean = false, limit: Boolean = true,
+                                    since: Option[String] = None, before: Option[String] = None,
+                                    size: Boolean = false)
+
   case class CreateContainerReqParam()
 
   case class BuildImageReqParam(t: String, q: Boolean, nocache: Boolean, rm: String, forcerm: Boolean)

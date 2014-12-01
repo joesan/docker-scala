@@ -17,7 +17,7 @@ class Info {
       .path(resourcePath)
       .request()
       .accept(MediaType.APPLICATION_JSON)
-      .get(classOf[SystemInfo])
+    .get(classOf[SystemInfo])
   }
 }
 object Info extends (DockerClientContext => SystemInfo) {

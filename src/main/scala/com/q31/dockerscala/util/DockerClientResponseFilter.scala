@@ -22,6 +22,8 @@ class DockerClientResponseFilter extends ClientResponseFilter {
   // TODO get the exception message from responseContext
   def filter(requestContext: ClientRequestContext, responseContext: ClientResponseContext) = responseContext.getStatus() match {
 
+    case 200 =>
+
     case 400 => throw new DockerClientException(400, getMessageFromResponseContext(responseContext).getOrElse(ERROR_400_MESSAGE))
     case 401 => throw new DockerClientException(401, getMessageFromResponseContext(responseContext).getOrElse(ERROR_401_MESSAGE))
     case 404 => throw new DockerClientException(404, getMessageFromResponseContext(responseContext).getOrElse(ERROR_404_MESSAGE))

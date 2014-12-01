@@ -1,6 +1,6 @@
 package com.q31.dockerscala.api.request
 
-import com.q31.dockerscala.DockerClientContext
+import com.q31.dockerscala.{AuthStatus, DockerClientContext}
 import javax.ws.rs.core.MediaType
 import javax.ws.rs.client.Entity._
 import com.q31.dockerscala.api.request.params.RequestParam.AuthReqParam
@@ -16,7 +16,7 @@ class CheckAuth(params: AuthReqParam) {
     dockerClientContext.getBaseResource.path(resourcePath)
       .request()
       .accept(MediaType.APPLICATION_JSON)
-      .post(entity(params, MediaType.APPLICATION_JSON)).getStatus()
+    .post(entity(params, MediaType.APPLICATION_JSON)).getStatus()
   }
 
 }

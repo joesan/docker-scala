@@ -1,10 +1,11 @@
 package com.q31.dockerscala.domain
 
-import com.fasterxml.jackson.annotation.JsonProperty
+import com.fasterxml.jackson.annotation.{JsonIgnoreProperties, JsonProperty}
 
 /**
  * @author Joe San (codeintheopen@gmail.com)
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 class Image(@JsonProperty("RepoTags") repoTags: Array[String],
             @JsonProperty("Size") size: Long,
             @JsonProperty("Created") created: Long,

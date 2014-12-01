@@ -22,7 +22,7 @@ class ContainerLogs(id: ContainerId, params: ContainerLogReqParam) {
       .queryParam("tail", params.tail)
       .request()
       .accept(MediaType.APPLICATION_JSON)
-      .get(classOf[InputStream])
+    .get(classOf[InputStream])
   }
 }
 object ContainerLogs extends ((DockerClientContext, ContainerId, ContainerLogReqParam) => InputStream) {
