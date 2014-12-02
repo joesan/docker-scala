@@ -20,14 +20,13 @@ class ListContainersTest extends FlatSpec with Matchers with BeforeAndAfterAll {
     // Remove / clean-up all the containers that was created in the scope of this test!
   }
 
-  lazy val defaultClientConfig = ConfigFactory.load()
-  lazy val sslClientConfig = ConfigFactory.load("application-test-ssl.conf")
+  lazy val testClientConfig = ConfigFactory.load()
 
   behavior of "ListContainers"
 
   "ListContainers" should "list all the containers available in a docker running instance" in {
     val params = ListContainersReqParam(all = true)
-    val containers = DockerRemoteClientFactory.buildFromConfig(defaultClientConfig).listContainers(params)
+    val containers = DockerRemoteClientFactory.buildFromConfig(testClientConfig).listContainers(params)
     containers foreach { container =>
       container.id should not be null
       // TODO... Check other ones!

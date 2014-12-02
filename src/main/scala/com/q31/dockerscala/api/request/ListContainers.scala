@@ -4,7 +4,6 @@ import com.q31.dockerscala.DockerClientContext
 import com.q31.dockerscala.api.domain.Container
 import com.q31.dockerscala.api.request.params.RequestParam.ListContainersReqParam
 import javax.ws.rs.core.{GenericType, MediaType}
-import java.io.InputStream
 
 /**
  * @author Joe San (codeintheopen@gmail.com)

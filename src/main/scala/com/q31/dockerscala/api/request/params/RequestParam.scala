@@ -14,7 +14,11 @@ object RequestParam {
                                     since: Option[String] = None, before: Option[String] = None,
                                     size: Boolean = false)
 
-  case class CreateContainerReqParam()
+  case class CreateContainerReqParam(hostName: String, domainName: String, user: String, memory: Int, memorySwap: Int,
+                                      cpuShares: Int, cpuSet: String, attachStdin: Boolean, attachStdOut: Boolean,
+                                      attachStdErr: Boolean, tty: Boolean, openStdIn: Boolean, stdInOnce: Boolean,
+                                      end: String, cmd: List[String], entryPoint: String, image: String,
+                                      )
 
   case class BuildImageReqParam(t: String, q: Boolean, nocache: Boolean, rm: String, forcerm: Boolean)
 
