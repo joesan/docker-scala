@@ -35,10 +35,6 @@ object DockerRemoteClientFactory {
     clientConfig.register(classOf[JsonClientFilter])
     clientConfig.register(classOf[JacksonJsonProvider])
 
-    /*if (dockerClientConfig.isLoggingFilterEnabled()) {
-      clientConfig.register(new SelectiveLoggingFilter(LOGGER, true));
-    } */
-
     val clientBuilder = ClientBuilder.newBuilder().withConfig(clientConfig)
 
     val dockerCertPath = dockerClientConfig.dockerCertPath
