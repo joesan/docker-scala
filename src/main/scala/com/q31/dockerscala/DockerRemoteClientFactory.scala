@@ -26,7 +26,6 @@ object DockerRemoteClientFactory {
   def buildDefault(): DockerRemoteClient = new DockerRemoteClientImpl(clientContext(DockerClientConfig.default()))
 
   private def init(dockerClientConfig: DockerClientConfig) = {
-    //Preconditions.checkNotNull(dockerClientConfig, "config was not specified");
 
     val clientConfig = new ClientConfig()
     clientConfig.property(CommonProperties.FEATURE_AUTO_DISCOVERY_DISABLE, true)
