@@ -82,23 +82,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/CertificateUtils.scala" line="24" class="com.q31.dockerscala.util.CertificateUtils$" package="com.q31.dockerscala.util">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -136,6 +119,23 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/CertificateUtils.scala" line="24" class="com.q31.dockerscala.util.CertificateUtils$" package="com.q31.dockerscala.util">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -149,9 +149,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ListContainers.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#41#87#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,9 +158,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ListImages.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="7" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#41#87#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,9 +176,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/api/request/ListContainersTest.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="28" column="79" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#41#93#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,9 +185,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="3" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#48#84#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -201,10 +193,8 @@
       <file leaf-file-name="Volumes.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Volumes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="17" selection-start="823" selection-end="823" vertical-scroll-proportion="0.2039801">
-              <folding>
-                <element signature="e#36#117#0" expanded="true" />
-              </folding>
+            <state line="24" column="48" selection-start="733" selection-end="733" vertical-scroll-proportion="0.05970149">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -213,9 +203,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/ThrowAwayTest.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="27" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#29#70#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -530,8 +518,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -852,9 +840,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="ScalaTest.DockerRemoteClientImplTest">
     <configuration default="false" name="DockerRemoteClientImplTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
@@ -902,14 +890,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
       <setting name="path" value="" />
@@ -923,17 +903,12 @@
       <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -961,6 +936,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -997,6 +985,19 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -1011,19 +1012,6 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <list size="1">
@@ -1175,30 +1163,47 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Container.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="314" selection-end="314" vertical-scroll-proportion="0.2238806">
-          <folding />
-        </state>
+        <state line="9" column="41" selection-start="314" selection-end="314" vertical-scroll-proportion="0.2238806" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.10/2.0/scalatest_2.10-2.0.jar!/org/scalatest/BeforeAndAfterAll.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/api/request/ListContainersTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="79" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#41#93#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="1" column="6" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.6" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/CheckAuth.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="562" selection-end="562" vertical-scroll-proportion="0.35942492">
+        <state line="18" column="4" selection-start="562" selection-end="562" vertical-scroll-proportion="0.35942492" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar!/com/fasterxml/jackson/core/ObjectCodec.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="71" selection-start="2054" selection-end="2054" vertical-scroll-proportion="0.38053098" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar!/com/fasterxml/jackson/databind/JsonNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="109" selection-start="4453" selection-end="4453" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3-sources.jar!/com/fasterxml/jackson/databind/util/EmptyIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="34" selection-start="566" selection-end="566" vertical-scroll-proportion="0.4477612" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3-sources.jar!/com/fasterxml/jackson/databind/JsonNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="22" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3-sources.jar!/com/fasterxml/jackson/databind/node/NullNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="27" selection-start="470" selection-end="470" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ListContainers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1206,69 +1211,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ListImages.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="7" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#41#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ListContainers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#41#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Top.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="234" selection-end="244" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar!/com/fasterxml/jackson/core/ObjectCodec.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="71" selection-start="2054" selection-end="2054" vertical-scroll-proportion="0.38053098">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar!/com/fasterxml/jackson/databind/JsonNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="109" selection-start="4453" selection-end="4453" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3-sources.jar!/com/fasterxml/jackson/databind/util/EmptyIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="566" selection-end="566" vertical-scroll-proportion="0.4477612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3-sources.jar!/com/fasterxml/jackson/databind/JsonNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3-sources.jar!/com/fasterxml/jackson/databind/node/NullNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="27" selection-start="470" selection-end="470" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#48#84#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1279,21 +1222,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/api/request/ListContainersTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="79" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/ThrowAwayTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="27" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#29#70#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Top.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="23" selection-start="234" selection-end="244" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Volumes.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="823" selection-end="823" vertical-scroll-proportion="0.2039801">
-          <folding>
-            <element signature="e#36#117#0" expanded="true" />
-          </folding>
+        <state line="24" column="48" selection-start="733" selection-end="733" vertical-scroll-proportion="0.05970149">
+          <folding />
         </state>
       </provider>
     </entry>
