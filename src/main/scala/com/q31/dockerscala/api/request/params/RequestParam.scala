@@ -17,8 +17,7 @@ object RequestParam {
   case class CreateContainerReqParam(hostName: String, domainName: String, user: String, memory: Int, memorySwap: Int,
                                       cpuShares: Int, cpuSet: String, attachStdin: Boolean, attachStdOut: Boolean,
                                       attachStdErr: Boolean, tty: Boolean, openStdIn: Boolean, stdInOnce: Boolean,
-                                      end: String, cmd: List[String], entryPoint: String, image: String,
-                                      )
+                                      end: String, cmd: List[String], entryPoint: String, image: String)
 
   case class BuildImageReqParam(t: String, q: Boolean, nocache: Boolean, rm: String, forcerm: Boolean)
 

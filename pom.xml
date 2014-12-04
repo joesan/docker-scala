@@ -17,6 +17,14 @@
   </properties>
 
   <repositories>
+  <repository>
+      <snapshots>
+          <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <url>http://repo1.maven.org/maven2</url>
+  </repository>
     <repository>
       <id>scala-tools.org</id>
       <name>Scala-Tools Maven2 Repository</name>
@@ -42,6 +50,12 @@
       <groupId>com.fasterxml.jackson.jaxrs</groupId>
       <artifactId>jackson-jaxrs-json-provider</artifactId>
       <version>${jackson-jaxrs.version}</version>
+    </dependency>
+      <!-- TODO... evaluating this json library -->
+    <dependency>
+      <groupId>com.propensive</groupId>
+      <artifactId>rapture-json-json4s_2.10</artifactId>
+      <version>1.0.8</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>

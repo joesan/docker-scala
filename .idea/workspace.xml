@@ -14,7 +14,7 @@
     <file path="/ListContainers.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417443132224" ignored="false" />
     <file path="/CreateContainerCall.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416340539570" ignored="false" />
     <file path="/DockerClientContext.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416343109427" ignored="false" />
-    <file path="/pom.xml" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416340289549" ignored="false" />
+    <file path="/pom.xml" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1417677462128" ignored="false" />
     <file path="/Restclient.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416340631923" ignored="false" />
     <file path="/CreateContainerRestClient.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416340761673" ignored="false" />
     <file path="/Info.scala" changelist="b92a7022-0f3a-4190-ae43-545d18f64afd" time="1416343435047" ignored="false" />
@@ -181,19 +181,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestParam.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RequestParam.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="3" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+            <state line="19" column="103" selection-start="969" selection-end="969" vertical-scroll-proportion="0.39800996">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Volumes.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Volumes.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Volumes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="48" selection-start="733" selection-end="733" vertical-scroll-proportion="0.05970149">
+            <state line="24" column="48" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="24" selection-start="2066" selection-end="2066" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -227,7 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/ContainerState.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/ContainerChangeLog.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Bind.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/util/DockerClientResponseFilter.scala" />
@@ -239,10 +247,11 @@
         <option value="$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/DockerRemoteClientImplTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/api/request/ListContainersTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/ListContainers.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Volumes.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/ThrowAeayTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/ThrowAwayTest.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala" />
       </list>
     </option>
   </component>
@@ -1056,7 +1065,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="1" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1074,7 +1083,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.124797404" sideWeight="0.83639145" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11993517" sideWeight="0.83639145" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4266055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1161,11 +1170,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Container.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="314" selection-end="314" vertical-scroll-proportion="0.2238806" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.10/2.0/scalatest_2.10-2.0.jar!/org/scalatest/BeforeAndAfterAll.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="6" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.6" />
@@ -1229,13 +1233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/q31/dockerscala/ThrowAwayTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="27" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
@@ -1252,7 +1249,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/domain/Volumes.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="48" selection-start="733" selection-end="733" vertical-scroll-proportion="0.05970149">
+        <state line="24" column="48" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="24" selection-start="2066" selection-end="2066" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/q31/dockerscala/api/request/params/RequestParam.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="103" selection-start="969" selection-end="969" vertical-scroll-proportion="0.39800996">
           <folding />
         </state>
       </provider>
