@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.node.NullNode
  * @author Joe San (codeintheopen@gmail.com)
  */
 // TODO... Work on this class as this seems to be confusing!!
+// TODO... Use Jacksons ObjectMapper to get a Map of key values!
 @JsonDeserialize(using = classOf[Volumes.VolumeDeserializer])
 @JsonSerialize(using = classOf[Volumes.VolumeSerializer])
 class Volumes {
