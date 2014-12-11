@@ -12,11 +12,11 @@ class DockerClientConfigTest extends FlatSpec with Matchers {
 
   behavior of "reading default docker client config"
 
-  it should "read all config entries and fail when any requirement is not met" in {
+  "DockerClientConfig#default" should "read all config entries and fail when any requirement is not met" in {
     intercept[IllegalArgumentException] { DockerClientConfig.default() }
   }
 
-  it should "read all config entries from the default config" in {
+  "DockerClientConfig#withConfig" should "read all config entries from the default config" in {
     val dockerConfig = DockerClientConfig.withConfig(ConfigFactory.load("application-test.conf"))
     println(dockerConfig.uri)
     println(dockerConfig.readTimeOut)
